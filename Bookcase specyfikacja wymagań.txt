@@ -1,4 +1,4 @@
-Aplikacja mobilna na systemy iOS, Android, Windows Phone wykonana przy użyciu frameworku IONIC. Aplikacja umożliwiać będzie wymianę używanych książek między użytkownikami bądź ich sprzedaż.
+Aplikacja mobilna na systemy iOS, Android wykonana przy użyciu frameworku IONIC. Aplikacja umożliwiać będzie wymianę używanych książek między użytkownikami bądź ich sprzedaż.
 
 1. EKRAN GŁÓWNY:	
 	wpisanie miasta do wyszukiwania
