@@ -1,0 +1,311 @@
+<ion-content fullscreen scroll-y="false">
+  <ion-slides id="slideFullScreen" #slidesUserPanel>
+    <ion-slide>
+      <div id="container">
+        <div id="buttonBackDiv">
+          <ion-button size="small" shape="round" class="buttonLight" (click)="back()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+        </div>
+        <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="2.5">
+              <ion-avatar>
+                <img src="https://i.ya-webdesign.com/images/male-avatar-png-7.png">
+              </ion-avatar>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12" style="text-align: center;">
+              Username
+            </ion-col>
+          </ion-row>
+          <ion-row style="padding-top: 70px;">
+            <ion-col size="6">
+              <ion-button expand="block" class="buttonNormal" (click)="changePasswd()">Zmiana hasła</ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button expand="block" class="buttonNormal" (click)="changeMail()">Zmiana e-mail</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-button expand="block" class="buttonNormal" (click)="changeCity()">Ulubione miasto</ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button expand="block" class="buttonNormal" (click)="changePersonal()">Moje dane</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="6">
+              <ion-button expand="block" class="buttonNormal" (click)="myOffers()">Moje oferty</ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button expand="block" class="buttonNormal" (click)="myFavorite()">Ulubione</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div id="container">
+        <div id="buttonBackDiv">
+          <ion-button size="small" shape="round" class="buttonLight" (click)="backInside()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+        </div>
+        <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-item>
+                <ion-label position="floating">Stare hasło</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-item>
+                <ion-label position="floating">Nowe hasło</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-item>
+                <ion-label position="floating">Powtórz nowe hasło</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-button expand="block" class="buttonNormal">Zapisz hasło</ion-button>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div id="container">
+        <div id="buttonBackDiv">
+          <ion-button size="small" shape="round" class="buttonLight" (click)="backInside()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+        </div>
+        <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-item>
+                <ion-label position="floating">Stary e-mail</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-item>
+                <ion-label position="floating">Nowy e-mail</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-item>
+                <ion-label position="floating">Powtórz nowy e-mail</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-button expand="block" class="buttonNormal">Zapisz e-mail</ion-button>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div id="container">
+        <div id="buttonBackDiv">
+          <ion-button size="small" shape="round" class="buttonLight" (click)="backInside()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+        </div>
+        <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-item>
+                <ion-label position="floating">Podaj ulubione miasto</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-button expand="block" class="buttonNormal">Zapisz miasto</ion-button>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div id="container">
+        <div id="buttonBackDiv">
+          <ion-button size="small" shape="round" class="buttonLight" (click)="backInside()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+        </div>
+        <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-item>
+                <ion-label position="floating">Imie</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-item>
+                <ion-label position="floating">Nazwisko</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-item>
+                <ion-label position="floating">Numer Telefonu</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-item>
+                <ion-label>Avatar</ion-label>
+                <ion-input type="file" accept="image/*" (change)="changeListener($event)"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col size="9">
+              <ion-button expand="block" class="buttonDark">Zapisz dane</ion-button>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div id="containerNoBG" style="padding-top: 20%;">
+        <div id="buttonBackDiv">
+          <ion-button size="small" shape="round" class="buttonLight" (click)="backInside()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+        </div>
+        <ion-list>
+          <ion-item>
+              <ion-thumbnail slot="start">
+                  <img src="assets\ksiazka1.png" class="ksiazka1">
+              </ion-thumbnail>
+              <ion-label>
+                  <h2>Antygona</h2>
+                  <h3>Sofokles</h3>
+              </ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-thumbnail slot="start">
+                  <img src="assets\ksiazka2.png" class="ksiazka2">
+              </ion-thumbnail>
+              <ion-label>
+                  <h2>Lalka</h2>
+                  <h3>Bolesław Prus</h3>
+              </ion-label> 
+          </ion-item>
+      </ion-list>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div id="containerNoBG" style="padding-top: 20%;">
+        <div id="buttonBackDiv">
+          <ion-button size="small" shape="round" class="buttonLight" (click)="backInside()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </ion-button>
+        </div>
+        <ion-list>
+          <ion-item>
+              <ion-thumbnail slot="start">
+                  <img src="assets\ksiazka3.png" class="ksiazka3">
+              </ion-thumbnail>
+              <ion-label>
+                  <h2>Dziady cz. III</h2>
+                  <h3>Adam Mickiewicz</h3>
+                  <p>Wejherowo</p>
+                  <h2>Cena: 25zł</h2>
+              </ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-thumbnail slot="start">
+                  <img src="assets\ksiazka4.png" class="ksiazka4">
+              </ion-thumbnail>
+              <ion-label>
+                  <h2>Pan Tadeusz</h2>
+                  <h3>Adam Mickiewicz</h3>
+                  <p>Gdynia</p>
+                  <h2>Wymiana</h2>
+              </ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-thumbnail slot="start">
+                  <img src="assets\ksiazka5.png" class="ksiazka5">
+              </ion-thumbnail>
+              <ion-label>
+                  <h2>Wesele</h2>
+                  <h3>Stanislaw Wyspiański</h3>
+                  <p>Gdańsk</p>
+                  <h2>Cena: 15zł</h2>
+              </ion-label>
+          </ion-item>
+      </ion-list>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

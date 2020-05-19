@@ -1,0 +1,68 @@
+<ion-content fullscreen scroll-y="false">
+  <div id="container">
+    <div id="buttonBackDiv">
+      <ion-button
+        size="small"
+        shape="round"
+        class="buttonLight"
+        (click)="back()"
+      >
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col size="9">
+          <ion-item>
+            <ion-label position="floating">E-mail </ion-label>
+            <ion-input type="email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col size="9">
+          <ion-item>
+            <ion-label position="floating">Hasło</ion-label>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> </ion-col>
+        <ion-col size="9">
+          <ion-button expand="block" class="buttonNormal" (click)="loginUser()">
+            Zaloguj
+          </ion-button>
+        </ion-col>
+        <ion-col> </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> </ion-col>
+        <ion-col size="3">
+          <ion-button shape="round" class="buttonFB">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button shape="round" class="buttonGmail">
+            <ion-icon name="logo-google"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button
+            shape="round"
+            class="buttonDark"
+            (click)="navigateToRegister()"
+          >
+            <ion-icon name="person-add"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col> </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
