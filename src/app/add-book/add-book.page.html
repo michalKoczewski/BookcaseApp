@@ -1,0 +1,53 @@
+<ion-content>
+  <div id="container">
+    <ion-item>
+      <ion-label position="floating">Tytuł</ion-label>
+      <ion-input type="text" [(ngModel)]="book.tytul" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Autor</ion-label>
+      <ion-input type="text" [(ngModel)]="book.autor" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Cena</ion-label>
+      <ion-input type="text" [(ngModel)]="book.cena" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Stan</ion-label>
+      <ion-input type="text" [(ngModel)]="book.stan" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Opis</ion-label>
+      <ion-input type="text" [(ngModel)]="book.opis"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Miasto</ion-label>
+      <ion-input type="text" [(ngModel)]="book.miasto" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <input
+          id="uploadBtn"
+          type="file"
+          class="upload"
+          (change)="uploadFile($event.target.files)"
+        />
+        Wybierz plik
+      </ion-label>
+    </ion-item>
+    <ion-button
+      expand="full"
+      class="ion-padding"
+      shape="round"
+      (click)="addBook(post)"
+    >
+      Add book
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,57 +1,37 @@
-<ion-content  fullscreen scroll-y="false">
- 
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="bottom" horizontal="end" stot="fixed">
+    <ion-fab-button href="add-book" id="fabBtn">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   <div id="container">
-    <div id="accountDiv">
-      <ion-avatar (click)="navigateToUserPanel()">
-        <img id="accountAvatar" src="https://i.ya-webdesign.com/images/male-avatar-png-7.png">
-      </ion-avatar>
-    </div>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-        </ion-col>
-        <ion-col width="8">
-          <ion-img src="assets\logo.png" class="logoimg"></ion-img>
-          <br/><br/><br/><br/><br/><br/>
-        </ion-col>
-        <ion-col>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col >
-        </ion-col>
-        <ion-col size="6">
-          <ion-item>
-          <ion-label position="floating">Podaj miasto</ion-label>
-            <ion-input></ion-input>
+    <ion-list>
+      <ion-list lines="none">
+        <ion-item-sliding *ngFor="let book of book">
+          <ion-item class="no-padding">
+            <ion-label>
+              <h2>Tytuł: {{book.tytul}}</h2>
+              <p>Autor: {{book.autor}}</p>
+              <h3>Cena: {{book.cena}}</h3>
+              <h4>Stan: {{book.stan}}</h4>
+              <h5>Opis: {{book.opis}}</h5>
+              <h6>Miasto :{{book.miasto}}</h6>
+            </ion-label>
           </ion-item>
-        </ion-col>
-        <ion-col size="2" style="margin-top: auto;">
-            <ion-button class="buttonDark" (click)="navigateToList()"><ion-icon name="search-outline"></ion-icon></ion-button>
-        </ion-col>
-        <ion-col>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-        </ion-col>
-        <ion-col size="8">
-          <br/><br/><br/>
-          <ion-button class="buttonLight" expand="block" (click)='navigateToLogin()'>zaloguj</ion-button>
-        </ion-col>
-        <ion-col>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-        </ion-col>
-        <ion-col size="8">
-          <ion-button class="buttonLight" expand="block" (click)="navigateToRegister()">zarejestruj</ion-button>
-        </ion-col>
-        <ion-col>
-        </ion-col>
-      </ion-row>
-  </ion-grid>
-  </div>
 
+          <ion-item-options side="start">
+            <ion-item-option routerLink="/edit-book/book.id">
+              <ion-icon slot="start" name="pencil-outline"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+
+          <ion-item-options side="end">
+            <ion-item-option color="danger" (click)="deleteBook(book.id)">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-list>
+  </div>
 </ion-content>

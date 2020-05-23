@@ -1,44 +1,37 @@
 import { Component, OnInit } from "@angular/core";
-import { NavController, AlertController } from "@ionic/angular";
-import { AuthService } from "../services/auth.service";
 import { Router } from "@angular/router";
+import { AuthenticationService } from "../shared/authentication-service";
 
 @Component({
   selector: "app-login",
   templateUrl: "./login.page.html",
   styleUrls: ["./login.page.scss"],
 })
-export class LoginPage {
-  email: string = "";
-  password: string = "";
+export class LoginPage implements OnInit {
   constructor(
-    private navCtrl: NavController,
-    private authService: AuthService,
-    private router: Router,
-    private alertCtrl: AlertController
+    public authService: AuthenticationService,
+    public router: Router
   ) {}
 
-  navigateToRegister() {
-    this.navCtrl.navigateForward("register");
+  ngOnInit() {}
+
+  goToRegister() {
+    this.router.navigate(["/registration"]);
   }
 
-  back() {
-    this.navCtrl.back();
-  }
-
-  async loginUser(): Promise<void> {
-    alert(this.email + " " + this.password);
-    this.authService.loginUser(this.email, this.password).then(
-      () => {
-        this.navCtrl.navigateForward("home");
-      },
-      async (error) => {
-        const alert = await this.alertCtrl.create({
-          message: error.message,
-          buttons: [{ text: "Ok", role: "cancel" }],
-        });
-        await alert.present();
-      }
-    );
+  logIn(email, password) {
+    this.authService
+      .SignIn(email.value, password.value)
+      .then((res) => {
+        if (this.authService.isEmailVerified) {
+          this.router.navigate(["dashboard"]);
+        } else {
+          window.alert("Email is not verified");
+          return false;
+        }
+      })
+      .catch((error) => {
+        window.alert(error.message);
+      });
   }
 }

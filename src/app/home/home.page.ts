@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
-import { NavController } from "@ionic/angular";
+import { LoadingController, ToastController } from "@ionic/angular";
+import { AngularFirestore } from "@angular/fire/firestore";
 
 @Component({
   selector: "app-home",
@@ -7,21 +8,64 @@ import { NavController } from "@ionic/angular";
   styleUrls: ["home.page.scss"],
 })
 export class HomePage {
-  constructor(private navCtrl: NavController) {}
+  book: any;
+  constructor(
+    private loadingCtrl: LoadingController,
+    private toastCtrl: ToastController,
+    private firestore: AngularFirestore
+  ) {}
 
-  navigateToLogin() {
-    this.navCtrl.navigateForward("login");
+  ionViewWillEnter() {
+    this.getBooks();
   }
 
-  navigateToRegister() {
-    this.navCtrl.navigateForward("register");
+  async getBooks() {
+    let loader = this.loadingCtrl.create({
+      message: "Please wait",
+    });
+    (await loader).present();
+
+    try {
+      this.firestore
+        .collection("book")
+        .snapshotChanges()
+        .subscribe((data) => {
+          this.book = data.map((e) => {
+            return {
+              id: e.payload.doc.id,
+              tytul: e.payload.doc.data()["tytul"],
+              autor: e.payload.doc.data()["autor"],
+              cena: e.payload.doc.data()["cena"],
+              stan: e.payload.doc.data()["stan"],
+              opis: e.payload.doc.data()["opis"],
+              miasto: e.payload.doc.data()["miasto"],
+            };
+          });
+        });
+
+      (await loader).dismiss();
+    } catch (e) {
+      this.showToast(e);
+    }
   }
 
-  navigateToUserPanel() {
-    this.navCtrl.navigateForward("userpanel");
+  async deleteBook(id: string) {
+    let loader = this.loadingCtrl.create({
+      message: "Please wait",
+    });
+    (await loader).present();
+
+    await this.firestore.doc("book/" + id).delete();
+
+    (await loader).dismiss();
   }
 
-  navigateToList() {
-    this.navCtrl.navigateForward("products");
+  showToast(message: string) {
+    this.toastCtrl
+      .create({
+        message: message,
+        duration: 3000,
+      })
+      .then((toastData) => toastData.present());
   }
 }
