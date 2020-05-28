@@ -18,7 +18,7 @@ Bookcase jest aplikacją umożliwiającą zakup, sprzedaż oraz wymianę nowych 
 
 #### 1.1.4. Warunki licencyjne
 
-###  1.2. Specyfikacja właściwa
+###  1.2. Specyfikacja
 
 #### 1.2.1 Wymagania Funkcjonalne
 <h5> 1.	EKRAN GŁÓWNY: </h5>
