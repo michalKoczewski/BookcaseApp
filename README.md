@@ -196,7 +196,7 @@ Szczegółowe informacje dotyczące książki oraz dane kontaktowe do jej właś
 <br><br>
 
 ## Logowanie:
-Po kliknięciu przcyisku z ikoną użytkownika aby dostać się do panelu użytkownika najpierw trzeba się zalogować.
+Po kliknięciu przycisku z ikoną użytkownika aby dostać się do panelu użytkownika najpierw trzeba się zalogować.
 <p align="center">
   <img width="380" height="650" src="https://i.imgur.com/lFOEIgk.png">
 </p>
