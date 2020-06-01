@@ -60,9 +60,9 @@ Bookcase jest aplikacją umożliwiającą zakup, sprzedaż oraz wymianę nowych 
 7.2	dodawanie autora, stanu książki, ceny, tytułu oraz krótkiego opisu <br>
 7.3	ustawienie miasta, w którym obowiązuje oferta <br>
 7.4	przycisk zatwierdzania nowej oferty <br>
-7.5	w przypadku wymiany: lista interesujących nas pozycji (tytuły, autor, gatunek)<br>
+7.5	w przypadku wymiany: lista interesujących nas pozycji (tytuły, autor, gatunek)<br><br>
 
-<br>
+
 #### 1.2.2 Wymagania Niefunkcjonalne
 
 <h5> 1. NIEZAWODNOŚĆ </h5>
