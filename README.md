@@ -205,7 +205,6 @@ Po kliknięciu przycisku z ikoną użytkownika aby dostać się do panelu użytk
 ## Rejestracja
 Jeśli nie mamy konta użytkownika, a nie chcemy korzystać z naszego konta google możemy się zarejestrować.
 <p align="center">
-Rejestracja: 
 </p>
 <p align="center">
   <img width="380" height="650" src="https://i.imgur.com/azT9CbL.png">
