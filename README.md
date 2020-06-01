@@ -16,7 +16,12 @@ Bookcase jest aplikacją umożliwiającą zakup, sprzedaż oraz wymianę nowych 
 2. Kuba Posadzy
 3. Michał Koczewski
 
-#### 1.1.4. Warunki licencyjne
+#### 1.1.4. Licencja
+```
+Copyright © 2020 by Mateusz Łukasiński, Mateusz Kusiak, Patryk Opis. Busex
+This application is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-nd/4.0/.
+```
 
 ###  1.2. Specyfikacja
 
