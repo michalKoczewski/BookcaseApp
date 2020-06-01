@@ -11,18 +11,6 @@ Nazwa ogólna: Bookcase - możliwość łatwej wymiany, sprzedaży i kupna ksią
 #### 1.1.2. Charakterystyka
 Bookcase jest aplikacją umożliwiającą zakup, sprzedaż oraz wymianę nowych bądź używanych książek. Jest to aplikacja mobilna przeznaczona na systemy Android, iOS i Windows Phone wykonana przy użyciu frameworku IONIC z wykorzystaniem bazy danych Firebase. 
 
-#### 1.1.3. Autorzy
-1. Martyna Wiloch
-2. Kuba Posadzy
-3. Michał Koczewski
-
-#### 1.1.4. Licencja
-```
-Copyright © 2020 by Mateusz Łukasiński, Mateusz Kusiak, Patryk Opis. Busex
-This application is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
-To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-nd/4.0/.
-```
-
 ###  1.2. Specyfikacja
 
 #### 1.2.1 Wymagania Funkcjonalne
@@ -100,4 +88,17 @@ Aplikacja ma sprawnie działać w warunkach stale rosnącej liczby użytkownikó
 ## 3. Testy
 ### 3.1. Scenariusze testów
 ### 3.2. Sprawozdanie z wykonania scenariuszy testów
+
+# 4. Warunki licencyjne
+## 4.1. Autorzy
+1. Martyna Wiloch
+2. Kuba Posadzy
+3. Michał Koczewski
+
+### 4.2. Licencja
+```
+Copyright © 2020 by Martyna Wiloch Michał Koczewski Kuba Posadzy Bookcase.
+This application is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-nd/4.0/.
+```
 
