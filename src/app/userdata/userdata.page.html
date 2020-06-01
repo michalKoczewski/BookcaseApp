@@ -1,0 +1,58 @@
+<ion-content fullscreen scroll-y="false">
+<div id="container">
+  <div id="buttonBackDiv">
+    <ion-button size="small" shape="round" class="buttonLight" (click)="userpanel()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col size="9">
+        <ion-item>
+          <ion-label position="floating">Nick</ion-label>
+          <ion-input type="text" [(ngModel)]="user.displayName" #displayName required></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col size="9">
+        <ion-item>
+          <ion-label position="floating">Imie</ion-label>
+          <ion-input type="text" [(ngModel)]="user.name" #name required></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col size="9">
+        <ion-item>
+          <ion-label position="floating">Nazwisko</ion-label>
+          <ion-input type="text" [(ngModel)]="user.second_name" #second_name required></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col size="9">
+        <ion-item>
+          <ion-label position="floating">Numer Telefonu</ion-label>
+          <ion-input type="text" [(ngModel)]="user.telephone" #telephone required></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col size="9">
+        <ion-button expand="block" class="buttonDark" (click)="changedata(user)">Zapisz dane</ion-button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</ion-content>

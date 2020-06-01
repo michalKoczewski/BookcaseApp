@@ -8,22 +8,10 @@ const routes: Routes = [
       import("./home/home.module").then((m) => m.HomePageModule),
   },
   {
-    path: "",
-    redirectTo: "login",
-    pathMatch: "full",
-  },
-  {
     path: "registration",
     loadChildren: () =>
       import("./registration/registration.module").then(
         (m) => m.RegistrationPageModule
-      ),
-  },
-  {
-    path: "verify-email",
-    loadChildren: () =>
-      import("./verify-email/verify-email.module").then(
-        (m) => m.VerifyEmailPageModule
       ),
   },
   {
@@ -32,17 +20,38 @@ const routes: Routes = [
       import("./login/login.module").then((m) => m.LoginPageModule),
   },
   {
-    path: "dashboard",
+    path: "add-book",
     loadChildren: () =>
-      import("./dashboard/dashboard.module").then((m) => m.DashboardPageModule),
+      import("./add-book/add-book.module").then((m) => m.AddBookPageModule),
   },
   {
-    path: 'add-book',
-    loadChildren: () => import('./add-book/add-book.module').then( m => m.AddBookPageModule)
+    path: "list",
+    loadChildren: () =>
+      import("./list/list.module").then((m) => m.ListPageModule),
   },
   {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then( m => m.ListPageModule)
+    path: 'userpanel',
+    loadChildren: () => import('./userpanel/userpanel.module').then( m => m.UserpanelPageModule)
+  },
+  {
+    path: 'book-details',
+    loadChildren: () => import('./book-details/book-details.module').then( m => m.BookDetailsPageModule)
+  },
+  {
+    path: 'userpassword',
+    loadChildren: () => import('./userpassword/userpassword.module').then( m => m.UserpasswordPageModule)
+  },
+  {
+    path: 'useremail',
+    loadChildren: () => import('./useremail/useremail.module').then( m => m.UseremailPageModule)
+  },
+  {
+    path: 'usercity',
+    loadChildren: () => import('./usercity/usercity.module').then( m => m.UsercityPageModule)
+  },
+  {
+    path: 'userdata',
+    loadChildren: () => import('./userdata/userdata.module').then( m => m.UserdataPageModule)
   },
 ];
 

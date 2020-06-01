@@ -13,6 +13,7 @@ import {
 })
 export class AuthenticationService {
   userData: any;
+  public loggedin: boolean;
 
   constructor(
     public afStore: AngularFirestore,
@@ -34,20 +35,19 @@ export class AuthenticationService {
 
   // Login in with email/password
   SignIn(email, password) {
+    this.loggedin = true;
     return this.ngFireAuth.signInWithEmailAndPassword(email, password);
   }
 
   // Register user with email/password
   RegisterUser(email, password) {
-    return this.ngFireAuth.createUserWithEmailAndPassword(email, password);
-  }
-
-  // Email verification when new user register
-  async SendVerificationMail() {
-    return (await this.ngFireAuth.currentUser)
-      .sendEmailVerification()
-      .then(() => {
-        this.router.navigate(["verify-email"]);
+    return this.ngFireAuth
+      .createUserWithEmailAndPassword(email, password)
+      .then((result) => {
+        this.SetUserData(result.user);
+      })
+      .catch((e) => {
+        window.alert(e);
       });
   }
 
@@ -65,20 +65,20 @@ export class AuthenticationService {
       });
   }
 
-  // Returns true when user is looged in
-  get isLoggedIn(): boolean {
-    const user = JSON.parse(localStorage.getItem("user"));
-    return user !== null && user.emailVerified !== false ? true : false;
-  }
-
-  // Returns true when user's email is verified
-  get isEmailVerified(): boolean {
-    const user = JSON.parse(localStorage.getItem("user"));
-    return user.emailVerified !== false ? true : false;
+  isLoggedInx()
+  {
+    if(this.loggedin == true)
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
   }
 
   // Sign in with Gmail
   GoogleAuth() {
+    this.loggedin = true;
     return this.AuthLogin(new auth.GoogleAuthProvider());
   }
 
@@ -88,7 +88,7 @@ export class AuthenticationService {
       .signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(["dashboard"]);
+          this.router.navigate(["home"]);
         });
         this.SetUserData(result.user);
       })
@@ -107,7 +107,10 @@ export class AuthenticationService {
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL,
-      emailVerified: user.emailVerified,
+      city: null,
+      name: null,
+      second_name: null,
+      telephone: null
     };
     return userRef.set(userData, {
       merge: true,
@@ -116,6 +119,7 @@ export class AuthenticationService {
 
   // Sign-out
   SignOut() {
+    this.loggedin = false;
     return this.ngFireAuth.signOut().then(() => {
       localStorage.removeItem("user");
       this.router.navigate(["login"]);

@@ -1,53 +1,91 @@
 <ion-content>
   <div id="container">
-    <ion-item>
-      <ion-label position="floating">Tytuł</ion-label>
-      <ion-input type="text" [(ngModel)]="book.tytul" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Autor</ion-label>
-      <ion-input type="text" [(ngModel)]="book.autor" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Cena</ion-label>
-      <ion-input type="text" [(ngModel)]="book.cena" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Stan</ion-label>
-      <ion-input type="text" [(ngModel)]="book.stan" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Opis</ion-label>
-      <ion-input type="text" [(ngModel)]="book.opis"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Miasto</ion-label>
-      <ion-input type="text" [(ngModel)]="book.miasto" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>
-        <input
-          id="uploadBtn"
-          type="file"
-          class="upload"
-          (change)="uploadFile($event.target.files)"
-        />
-        Wybierz plik
-      </ion-label>
-    </ion-item>
-    <ion-button
-      expand="full"
-      class="ion-padding"
-      shape="round"
-      (click)="addBook(post)"
-    >
-      Add book
-    </ion-button>
+    <div id="buttonBackDiv">
+      <ion-button size="small" shape="round" class="buttonLight" (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col size="9">
+          <ion-item class="transparent">
+            <ion-label position="floating">Tytuł</ion-label>
+            <ion-input type="text" [(ngModel)]="book.tytul" required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col size="9">
+          <ion-item class="transparent">
+            <ion-label position="floating">Autor</ion-label>
+            <ion-input type="text" [(ngModel)]="book.autor" required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col size="9">
+          <ion-item class="transparent">
+            <ion-label position="floating">Cena</ion-label>
+            <ion-input type="text" [(ngModel)]="book.cena" required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col></ion-col>
+          <ion-col size="9">
+            <ion-item class="transparent">
+              <ion-label position="floating">Miasto</ion-label>
+              <ion-input type="text" [(ngModel)]="book.miasto" required></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col></ion-col>
+          <ion-col size="9">
+              <ion-item class="transparent">
+                  <ion-label>Stan</ion-label>
+                  <ion-select interface="popover" [(ngModel)]="book.stan" required>
+                    <ion-select-option value="Nowa">Nowa</ion-select-option>
+                    <ion-select-option value="Używana">Używana</ion-select-option>
+                  </ion-select>
+                </ion-item>
+          </ion-col>
+          <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col></ion-col>
+          <ion-col size="9">
+            <ion-item class="transparent">
+              <ion-label position="floating">Opis</ion-label>
+              <ion-textarea placeholder="max. 200 znaków" maxlength="200" [(ngModel)]="book.opis" required></ion-textarea>
+            </ion-item>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col size="9">
+          <ion-item class="transparent">
+            <ion-label>Zdjęcie</ion-label>
+            <ion-input type="file" accept="image/*" [(ngModel)]="book.zdjecie" (change)="uploadFile($event.target.files)"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col size="9">
+          <ion-button expand="block" class="buttonNormal" (click)="addBook(post)">Dodaj ofertę</ion-button>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>

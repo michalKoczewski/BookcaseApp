@@ -1,9 +1,42 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>list</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content [fullscreen]="true">
+  <div id="containerNoBG">
+    <ion-grid>
+        <div id="containerHeader">
+                    <ion-buttons slot="start">
+                <ion-menu-button class="btnMENU"></ion-menu-button>
+                <ion-avatar style="padding-top: 13px; padding-left: 15px;" (click)="navigateToUserPanel()">
+                    <img id="accountAvatar" src="https://i.ya-webdesign.com/images/male-avatar-png-7.png">
+                  </ion-avatar>
+            </ion-buttons>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-button class="btnAdd" (click)="newOffer()">DODAJ</ion-button>
+                    </ion-col>
+                    <ion-col></ion-col>
+                    <ion-col>
+                        <ion-img src="assets\logo.png" class="logoimgpr"></ion-img>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <ion-toolbar>
+            <ion-searchbar placeholder="szukaj"></ion-searchbar>
+        </ion-toolbar>
+        <ion-list>
+            <ion-item *ngFor="let book of book" class="transparent" (click)="moveToBook(book)">
+                <ion-thumbnail slot="start">
+                    <img [src]="imgsource" class="ksiazka1">
+                </ion-thumbnail>
+                <ion-label>
+                    <h2>{{book.tytul}}</h2>
+                    <h3>{{book.autor}}</h3>
+                    <p>{{book.miasto}}</p>
+                    <h2>Cena: {{book.cena}} zł</h2>
+                </ion-label>
+                <ion-button (click)="moveToBook(book)" shape="round" class="btnDetails"><ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+            </ion-item>
+        </ion-list>
+    </ion-grid>
+    </div>
 </ion-content>

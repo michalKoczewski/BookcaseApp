@@ -1,33 +1,50 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Register User</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" #email required></ion-input>
-    </ion-item>
-
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" #password required></ion-input>
-    </ion-item>
-
-    <ion-row>
-      <ion-col>
-        <ion-button
-          type="submit"
-          (click)="signUp(email, password)"
-          expand="block"
-          >Register</ion-button
-        >
-      </ion-col>
-    </ion-row>
-  </form>
+<ion-content fullscreen scroll-y="false">
+  <div id="container">
+    <div id="buttonBackDiv">
+      <ion-button size="small" shape="round" class="buttonLight" (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-grid class="margin">
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col size="9">
+          <ion-item>
+            <ion-label position="floating">E-mail </ion-label>
+            <ion-input type="email" [(ngModel)]="user.email" #email required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col size="9">
+          <ion-item>
+            <ion-label position="floating">Hasło</ion-label>
+            <ion-input type="password" #password required></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col size="9">
+          <ion-item>
+            <ion-label position="floating">Powtórz hasło</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> </ion-col>
+        <ion-col size="9">
+          <ion-button class="buttonNormal" expand="block" (click)="signUp(email, password)">
+            Zarejestruj
+          </ion-button>
+        </ion-col>
+        <ion-col> </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

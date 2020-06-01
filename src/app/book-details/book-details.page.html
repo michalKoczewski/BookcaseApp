@@ -1,0 +1,46 @@
+<ion-content>
+  <div id="containerNoBG">
+    <ion-grid no-padding>
+        <ion-row no-padding justify-content-start align-items-start>
+            <ion-col>
+                <ion-button (click)="movetoList()" class="btnDetails"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+            </ion-col>
+            <ion-col size="7" no-padding text-center>
+                <ion-img [src]="bookimage" class="detailsimg"></ion-img>
+            </ion-col>
+            <ion-col>
+                <ion-button class="btnFavourites"><ion-icon name="heart-outline"></ion-icon></ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-list>
+
+            <ion-item>
+                <ion-text style="color: var(--ion-color-bookmain-shade)">
+                    <h1><strong><i>{{book.tytul}}</i></strong></h1>
+                </ion-text>
+            </ion-item>
+            <ion-item>
+                Autor: <br /> {{book.autor}}
+            </ion-item>
+            <ion-item>
+                Cena: <br /> {{book.cena}} zł
+            </ion-item>
+            <ion-item>
+                Miasto: <br />  {{book.miasto}}
+            </ion-item>
+            <ion-item>
+                Stan: <br />  {{book.stan}}
+            </ion-item>
+            <ion-item>
+                Numer Telefonu: <br /> {{book.owner}}
+            </ion-item>
+            <ion-item>
+                Adres e-mail: <br />  
+            </ion-item>
+            <ion-item>
+                Opis: <br /> {{book.opis}}
+            </ion-item>
+        </ion-list>
+    </ion-grid>
+</div>
+</ion-content>

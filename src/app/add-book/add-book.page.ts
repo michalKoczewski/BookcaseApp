@@ -1,33 +1,21 @@
 import { Component, OnInit } from "@angular/core";
 import { Book } from "../shared/book.model";
-import {
-  ToastController,
-  LoadingController,
-  NavController,
-} from "@ionic/angular";
+import { ToastController, LoadingController, NavController } from "@ionic/angular";
 
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { IonicModule } from "@ionic/angular";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
-import {
-  AngularFireStorage,
-  AngularFireUploadTask,
-} from "@angular/fire/storage";
-import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-} from "@angular/fire/firestore";
+import { AngularFireStorage, AngularFireUploadTask } from "@angular/fire/storage";
+import { AngularFirestore, AngularFirestoreCollection } from "@angular/fire/firestore";
 import { Observable } from "rxjs";
-import { finalize, tap } from "rxjs/operators";
 import { FileSizeFormatPipe } from "./file-size-format.pipe";
+import { AngularFireAuth } from "@angular/fire/auth";
 
-export interface MyData {
-  name: string;
-  filepath: string;
-  size: number;
-}
+
+export interface MyData { name: string; filepath: string; size: number; }
+
 @NgModule({
   imports: [
     CommonModule,
@@ -49,6 +37,7 @@ export interface MyData {
 })
 export class AddBookPage implements OnInit {
   book = {} as Book;
+  userid: string;
 
   // Upload Task
   task: AngularFireUploadTask;
@@ -79,10 +68,11 @@ export class AddBookPage implements OnInit {
     private toastCtrl: ToastController,
     private loadingCtrl: LoadingController,
     private navCtrl: NavController,
-    private firestore: AngularFirestore,
     private storage: AngularFireStorage,
-    private database: AngularFirestore
-  ) {
+    private database: AngularFirestore,
+    public ngFireAuth: AngularFireAuth
+  ) 
+  {
     this.isUploading = false;
     this.isUploaded = false;
     //Set collection where our documents/ images info will save
@@ -93,13 +83,15 @@ export class AddBookPage implements OnInit {
   ngOnInit() {}
 
   async addBook() {
+    this.book.zdjecie = '/book/'+this.book.zdjecie.substr(this.book.zdjecie.lastIndexOf('\\') + 1);
+    this.userid = (await this.ngFireAuth.currentUser).uid;
+    this.book.test = this.userid;
     let loader = this.loadingCtrl.create({
       message: "Please wait",
     });
     (await loader).present();
-
     try {
-      await this.firestore.collection("book").add(this.book);
+      await this.database.collection("book").add(this.book);
     } catch (e) {
       this.showToast(e);
       console.log(e);
@@ -107,7 +99,7 @@ export class AddBookPage implements OnInit {
 
     (await loader).dismiss();
 
-    this.navCtrl.navigateRoot("home");
+    this.navCtrl.navigateRoot("list");
   }
 
   showToast(message: string) {
@@ -118,7 +110,8 @@ export class AddBookPage implements OnInit {
       })
       .then((toastData) => toastData.present());
   }
-
+  
+  //dodawanie do storage
   uploadFile(event: FileList) {
     // The File object
     const file = event.item(0);
@@ -129,64 +122,19 @@ export class AddBookPage implements OnInit {
       return;
     }
 
-    this.isUploading = true;
-    this.isUploaded = false;
-
     this.fileName = file.name;
 
     // The storage path
-    const path = `book/${new Date().getTime()}_${file.name}`;
+    const path = `book/${this.fileName}`;
 
     // Totally optional metadata
     const customMetadata = { app: "book" };
 
-    //File reference
-    const fileRef = this.storage.ref(path);
-
     // The main task
     this.task = this.storage.upload(path, file, { customMetadata });
-
-    // Get file progress percentage
-    this.percentage = this.task.percentageChanges();
-    this.snapshot = this.task.snapshotChanges().pipe(
-      finalize(() => {
-        // Get uploaded file storage path
-        this.UploadedFileURL = fileRef.getDownloadURL();
-
-        this.UploadedFileURL.subscribe(
-          (resp) => {
-            this.addImagetoDB({
-              name: file.name,
-              filepath: resp,
-              size: this.fileSize,
-            });
-            this.isUploading = false;
-            this.isUploaded = true;
-          },
-          (error) => {
-            console.error(error);
-          }
-        );
-      }),
-      tap((snap) => {
-        this.fileSize = snap.totalBytes;
-      })
-    );
   }
 
-  addImagetoDB(image: MyData) {
-    //Create an ID for document
-    const id = this.database.createId();
-
-    //Set document id with value in database
-    this.imageCollection
-      .doc(id)
-      .set(image)
-      .then((resp) => {
-        console.log(resp);
-      })
-      .catch((error) => {
-        console.log("error " + error);
-      });
+  back(){
+    this.navCtrl.back();
   }
 }

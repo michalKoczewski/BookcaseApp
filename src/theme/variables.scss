@@ -74,6 +74,30 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+    /** bookmain **/
+    --ion-color-bookmain: #76c77c;
+    --ion-color-bookmain-rgb: 118,199,124;
+    --ion-color-bookmain-contrast: #000000;
+    --ion-color-bookmain-contrast-rgb: 0,0,0;
+    --ion-color-bookmain-shade: #68af6d;
+    --ion-color-bookmain-tint: #84cd89;
+  
+    /** fb **/
+    --ion-color-fb: #3b5998;
+    --ion-color-fb-rgb: 59, 89, 152;
+    --ion-color-fb-contrast: #ffffff;
+    --ion-color-fb-contrast-rgb: 255, 255, 255;
+    --ion-color-fb-shade: #243f6e;
+    --ion-color-fb-tint: #3e5a8a;
+  
+    /** gmail **/
+    --ion-color-gmail: #ea4335;
+    --ion-color-gmail-rgb: 234, 67, 53;
+    --ion-color-gmail-contrast: #ffffff;
+    --ion-color-gmail-contrast-rgb: 255, 255, 255;
+    --ion-color-gmail-shade: #9d2b1d;
+    --ion-color-gmail-tint: #ba4637;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -224,5 +248,9 @@
     --ion-toolbar-background: #1f1f1f;
 
     --ion-tab-bar-background: #1f1f1f;
+  }
+
+  ion-title.title-large {
+    --color: white;
   }
 }

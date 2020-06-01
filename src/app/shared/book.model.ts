@@ -5,4 +5,6 @@ export interface Book {
   stan: string;
   opis: string;
   miasto: string;
+  zdjecie: string;
+  test: string;
 }

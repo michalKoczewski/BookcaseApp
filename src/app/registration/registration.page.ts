@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthenticationService } from "../shared/authentication-service";
-import { ToastController } from "@ionic/angular";
+import { ToastController, NavController } from "@ionic/angular";
+import { User } from "../shared/user";
 
 @Component({
   selector: "app-registration",
@@ -9,10 +10,13 @@ import { ToastController } from "@ionic/angular";
   styleUrls: ["./registration.page.scss"],
 })
 export class RegistrationPage implements OnInit {
+  user = {} as User;
+
   constructor(
     public authService: AuthenticationService,
     public router: Router,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    private navCtrl: NavController 
   ) {}
 
   ngOnInit() {}
@@ -21,11 +25,14 @@ export class RegistrationPage implements OnInit {
     this.authService
       .RegisterUser(email.value, password.value)
       .then((res) => {
-        this.authService.SendVerificationMail();
-        this.router.navigate(["verify-email"]);
+        this.router.navigate(["login"]);
       })
       .catch((e) => {
         window.alert(e.message);
       });
+  }
+
+  back(){
+    this.navCtrl.back();
   }
 }

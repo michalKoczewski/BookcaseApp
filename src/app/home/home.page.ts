@@ -1,71 +1,49 @@
-import { Component } from "@angular/core";
-import { LoadingController, ToastController } from "@ionic/angular";
-import { AngularFirestore } from "@angular/fire/firestore";
+import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { AuthenticationService } from "../shared/authentication-service";
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
-  selector: "app-home",
-  templateUrl: "home.page.html",
-  styleUrls: ["home.page.scss"],
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  book: any;
+
   constructor(
-    private loadingCtrl: LoadingController,
-    private toastCtrl: ToastController,
-    private firestore: AngularFirestore
-  ) {}
+    private navCtrl: NavController,
+    public authService: AuthenticationService,
+    public ngFireAuth: AngularFireAuth
+    ) {}
 
-  ionViewWillEnter() {
-    this.getBooks();
-  }
-
-  async getBooks() {
-    let loader = this.loadingCtrl.create({
-      message: "Please wait",
-    });
-    (await loader).present();
-
-    try {
-      this.firestore
-        .collection("book")
-        .snapshotChanges()
-        .subscribe((data) => {
-          this.book = data.map((e) => {
-            return {
-              id: e.payload.doc.id,
-              tytul: e.payload.doc.data()["tytul"],
-              autor: e.payload.doc.data()["autor"],
-              cena: e.payload.doc.data()["cena"],
-              stan: e.payload.doc.data()["stan"],
-              opis: e.payload.doc.data()["opis"],
-              miasto: e.payload.doc.data()["miasto"],
-            };
-          });
-        });
-
-      (await loader).dismiss();
-    } catch (e) {
-      this.showToast(e);
+  async navigateToLogin(){
+    if(this.authService.isLoggedInx().valueOf() == true){
+      this.navCtrl.navigateForward('userpanel');
+    }
+    else if (this.authService.isLoggedInx().valueOf() == false){
+      this.navCtrl.navigateForward('login');
     }
   }
 
-  async deleteBook(id: string) {
-    let loader = this.loadingCtrl.create({
-      message: "Please wait",
-    });
-    (await loader).present();
-
-    await this.firestore.doc("book/" + id).delete();
-
-    (await loader).dismiss();
+  async navigateToRegister(){
+    if(this.authService.isLoggedInx().valueOf() == true){
+      this.navCtrl.navigateForward('userpanel');
+    }
+    else if (this.authService.isLoggedInx().valueOf() == false){
+      this.navCtrl.navigateForward('registration');
+    }
   }
 
-  showToast(message: string) {
-    this.toastCtrl
-      .create({
-        message: message,
-        duration: 3000,
-      })
-      .then((toastData) => toastData.present());
+  async navigateToUserPanel(){
+    if(this.authService.isLoggedInx().valueOf() == true){
+      this.navCtrl.navigateForward('userpanel');
+    }
+    else if (this.authService.isLoggedInx().valueOf() == false){
+      this.navCtrl.navigateForward('login');
+    }
+  }
+
+  navigateToList(){
+    this.navCtrl.navigateForward('list');
   }
 }
