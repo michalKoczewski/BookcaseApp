@@ -50,7 +50,7 @@ Bookcase jest aplikacją umożliwiającą zakup, sprzedaż oraz wymianę nowych 
 6.1	wyświetlanie zdjęć (1-3) <br>
 6.2	wyświetlanie tytułu, autora, ceny, stanu książki oraz krótkiego opisu <br>
 6.3	możliwość wyświetlenia numeru kontaktowego <br>
-6.4	przycisk "Skontaktuj się z autorem ogłoszenia", po kliknięciu formularz wysłana adresu e-mail <br>
+6.4	przycisk "Skontaktuj się z autorem ogłoszenia", po kliknięciu formularz wysłania adresu e-mail <br>
 6.5	dodawanie oferty do ulubionych <br>
 6.6	przycisk powrotu do listy książek <br>
 6.7	niezalogowani nie mają wyświetlonego nr telefonu i adresu e-mail <br>
@@ -86,8 +86,16 @@ Aplikacja ma sprawnie działać w warunkach stale rosnącej liczby użytkownikó
 #### 2.1.2. Architektura uruchomieniowa
 
 ## 3. Testy
-### 3.1. Scenariusze testów
-### 3.2. Sprawozdanie z wykonania scenariuszy testów
+### 3.1. T1 - Instalacja Aplikacji
+### 3.2. T2 - Wyświetlanie listy książek dla wpisanego przez niezalogowanego użykownika miasta
+### 3.3. T3 - Tworzenie nowego konta użytkownika
+### 3.4. T4 - Logowanie się do aplikacji
+### 3.5. T5 - Filtrowanie listy książek
+### 3.6. T6 - Dodawanie nowej pozycji do listy książek
+### 3.7  T7 - Usuwanie pozycji z listy książek
+### 3.8  T8 - Działanie formularza wysłania adresu e-mail
+### 3.9  T9 - Wyświetlanie listy ulubionych książek
+### 3.10  T10 - Wyświetlanie swoich ofert sprzedaży/wymiany 
 
 # 4. Warunki licencyjne
 ## 4.1. Autorzy
