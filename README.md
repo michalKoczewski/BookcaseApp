@@ -97,13 +97,15 @@ Aplikacja ma sprawnie działać w warunkach stale rosnącej liczby użytkownikó
 ### 3.9  T9 - Wyświetlanie listy ulubionych książek
 ### 3.10  T10 - Wyświetlanie swoich ofert sprzedaży/wymiany 
 
-# 4. Warunki licencyjne
-## 4.1. Autorzy
+# 4. Wygląd aplikacji
+
+# 5. Warunki licencyjne
+## 5.1. Autorzy
 1. Martyna Wiloch
 2. Kuba Posadzy
 3. Michał Koczewski
 
-### 4.2. Licencja
+### 5.2. Licencja
 ```
 Copyright © 2020 by Martyna Wiloch, Michał Koczewski, Kuba Posadzy. Bookcase
 This application is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
