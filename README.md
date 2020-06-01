@@ -159,7 +159,7 @@ Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
 #### Odpowiedź systemu:
 * Dane użytkownika zostały poprawnie zmienione.
 
-### 3.7  T7 - Dodawanie lub zmiana ulubionego miasta
+### 3.8  T8 - Dodawanie lub zmiana ulubionego miasta
 Testowanie poprawnego dodania lub zmiany ulubionego miasta. 
 #### Sposób dostępu: 
 Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
