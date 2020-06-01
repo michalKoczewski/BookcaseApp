@@ -182,7 +182,7 @@ Będąc na stronie głównej można: przejść do panelu użytkownika, przejść
 <br><br>
 
 ## Szczegóły oferty: 
-Szczegółowe informacje dotyczące książki oraz jej właściciela.
+Szczegółowe informacje dotyczące książki oraz dane kontaktowe do jej właściciela.
 <p align="center">
   <img width="380" height="650" src="https://i.imgur.com/GFcW36l.png">
 </p>
