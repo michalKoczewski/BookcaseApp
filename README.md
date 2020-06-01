@@ -175,7 +175,7 @@ Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
 
 # 4. Wygląd aplikacji
 ## Strona Główna:
-Będąc na stronie głównej można: wejść przejść do panelu użytkownika, przejść do szczegółów oferty lub dodać nową ofertę.
+Będąc na stronie głównej można: przejść do panelu użytkownika, przejść do szczegółów oferty lub dodać nową ofertę.
 <p align="center">
   <img width="380" height="650" src="https://i.imgur.com/4RubGgD.png">
 </p>
