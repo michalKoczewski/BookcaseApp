@@ -68,13 +68,13 @@ Bookcase jest aplikacją umożliwiającą zakup, sprzedaż oraz wymianę nowych 
 <h5> 1. NIEZAWODNOŚĆ </h5>
 Możliwość korzystania z aplikacji ma być bezustannie dostępna.
 <h5> 2. BEZPIECZEŃSTWO </h5>
+Poufność i stopień zabezpieczenia danych w aplikacji.
 <h5> 3. WYDAJNOŚĆ </h5> 
 Aplikacja ma być w stanie obsłużyć wielu użytkowników jednocześnie.
 <h5> 4. UŻYTECZNOŚĆ </h5> 
-Aplikacja ma spełniać wszystkie wymagania funkcjonalne.
+Aplikacja ma spełniać wszystkie wymagania funkcjonalne
 <h5> 5. ZROZUMIAŁOŚĆ </h5> 
 Aplikacja ma być intuicyjna i przejrzysta dla użytkownika.
-<h5> 6. KOMPLETNOŚĆ </h5>
 <h5> 7. ZGODNOŚĆ </h5> 
 Wygląd aplikacji ma być wysoce zbliżony na wszystkich systemach.
 <h5> 8. SKALOWALNOŚĆ </h5>  
@@ -97,7 +97,7 @@ Aplikacja ma sprawnie działać w warunkach stale rosnącej liczby użytkownikó
 
 ### 4.2. Licencja
 ```
-Copyright © 2020 by Martyna Wiloch Michał Koczewski Kuba Posadzy Bookcase.
+Copyright © 2020 by Martyna Wiloch, Michał Koczewski, Kuba Posadzy. Bookcase
 This application is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
 To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-nd/4.0/.
 ```
