@@ -189,7 +189,7 @@ Szczegółowe informacje dotyczące książki oraz dane kontaktowe do jej właś
 <br><br>
 
 ## Dodawanie nowej oferty: 
-Łatwe i intuicyjne dodawanie nowych ofert:
+Łatwe i intuicyjne dodawanie nowych ofert.
 <p align="center">
   <img width="380" height="650" src="https://i.imgur.com/CLGbyrc.png">
 </p>
