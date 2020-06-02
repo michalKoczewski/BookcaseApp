@@ -145,9 +145,9 @@ Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
 #### Scenariusz (kroki testowe):
 #### Akcje użytkownika:
 * Kliknięcie przycisku z ikoną użytkownika.
-* Kliknięcie przycisku zmiana email.
-* Wpisanie nowego emaila.
-* Zatwierdzenie poprzez kliknięcie przycisku zapisz email.
+* Kliknięcie przycisku zmiana e-mail.
+* Wpisanie nowego adresu e-mail.
+* Zatwierdzenie poprzez kliknięcie przycisku zapisz e-mail.
 #### Odpowiedź systemu:
 * E-mail został poprawnie zmieniony.
 
