@@ -65,7 +65,7 @@ Aplikacja ma sprawnie działać w warunkach stale rosnącej liczby użytkownikó
 ## 2. Projekt
 ### 2.1. Architektura systemu
 #### 2.1.1. Architektura rozwoju
-Aplikacja została napisana w środowisku Visual Studio Code. Jest to aplikacja mobilna przeznaczona na systemy Android, iOS wykonana przy użyciu frameworku IONIC w języku Angular z wykorzystaniem bazy danych Firebase. 
+Aplikacja została napisana w środowisku Visual Studio Code. Jest to aplikacja mobilna przeznaczona na systemy Android, iOS wykonana przy użyciu frameworku Ionic w języku Angular z wykorzystaniem bazy danych Firebase. 
 #### 2.1.2. Architektura uruchomieniowa
 Aplikację w formie projektu można uruchomić w wieloplatformowym środowisku uruchomieniowym Node.js. Do uruchomienia projektu niezbędne jest połączenie z internetem. Aplikacja docelowo będzię dostępna w AppStore i PlayStore.
 ## 3. Testy
