@@ -88,7 +88,7 @@ export class AddBookPage implements OnInit {
   }
 
   async addBook() {
-    this.book.zdjecie = '/book/'+this.book.zdjecie.substr(this.book.zdjecie.lastIndexOf('\\') + 1);
+    this.book.zdjecie = this.book.zdjecie;//.substr(this.book.zdjecie.lastIndexOf('\\') + 1);
     this.book.owner = this.userid;
     let loader = this.loadingCtrl.create({
       message: "Please wait",
