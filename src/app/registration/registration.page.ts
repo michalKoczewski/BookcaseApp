@@ -16,7 +16,7 @@ export class RegistrationPage implements OnInit {
     public authService: AuthenticationService,
     public router: Router,
     public toastCtrl: ToastController,
-    private navCtrl: NavController 
+    private navCtrl: NavController
   ) {}
 
   ngOnInit() {}
@@ -32,7 +32,7 @@ export class RegistrationPage implements OnInit {
       });
   }
 
-  back(){
+  back() {
     this.navCtrl.back();
   }
 }

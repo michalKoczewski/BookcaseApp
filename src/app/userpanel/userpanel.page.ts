@@ -1,40 +1,40 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
-import { AuthenticationService } from '../shared/authentication-service';
+import { Component, OnInit } from "@angular/core";
+import { NavController } from "@ionic/angular";
+import { AuthenticationService } from "../shared/authentication-service";
 
 @Component({
-  selector: 'app-userpanel',
-  templateUrl: './userpanel.page.html',
-  styleUrls: ['./userpanel.page.scss'],
+  selector: "app-userpanel",
+  templateUrl: "./userpanel.page.html",
+  styleUrls: ["./userpanel.page.scss"],
 })
 export class UserpanelPage implements OnInit {
 
   constructor(
     private navCtrl: NavController,
-    public authService: AuthenticationService,
-    ) { }
+    public authService: AuthenticationService
+  ) {}
 
   ngOnInit() {
-    }
-
-  back(){
-    this.navCtrl.navigateForward('list');
   }
 
-  changePasswd(){
-    this.navCtrl.navigateForward('userpassword');
+  back() {
+    this.navCtrl.navigateRoot("list");
   }
 
-  changeMail(){
-    this.navCtrl.navigateForward('useremail');
+  changePasswd() {
+    this.navCtrl.navigateForward("userpassword");
   }
 
-  changeCity(){
-    this.navCtrl.navigateForward('usercity');
+  changeMail() {
+    this.navCtrl.navigateForward("useremail");
   }
 
-  changePersonal(){
-    this.navCtrl.navigateForward('userdata');
+  changeCity() {
+    this.navCtrl.navigateForward("usercity");
+  }
+
+  changePersonal() {
+    this.navCtrl.navigateForward("userdata");
   }
 
   /*myOffers(){
@@ -48,5 +48,4 @@ export class UserpanelPage implements OnInit {
     this.slides.slideTo(6);
     this.slides.lockSwipes(true);
   }*/
-
 }

@@ -27,7 +27,6 @@ export class BookDetailsPage implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.book = params["book"]
   });
-  console.log(this.book.test);
   }
 
   movetoList(){

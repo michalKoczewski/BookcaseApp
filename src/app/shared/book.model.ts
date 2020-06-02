@@ -6,5 +6,7 @@ export interface Book {
   opis: string;
   miasto: string;
   zdjecie: string;
-  test: string;
+  owner: string;
+  telefon: string;
+  email: string;
 }

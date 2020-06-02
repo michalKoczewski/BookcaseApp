@@ -73,8 +73,8 @@
         <ion-col></ion-col>
         <ion-col size="9">
           <ion-item class="transparent">
-            <ion-label>Zdjęcie</ion-label>
-            <ion-input type="file" accept="image/*" [(ngModel)]="book.zdjecie" (change)="uploadFile($event.target.files)"></ion-input>
+            <ion-label>Zdjęcie (url)</ion-label>
+            <ion-input type="text" [(ngModel)]="book.zdjecie"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col></ion-col>
@@ -89,3 +89,4 @@
     </ion-grid>
   </div>
 </ion-content>
+<!--(change)="uploadFile($event.target.files)-->

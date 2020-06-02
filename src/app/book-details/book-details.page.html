@@ -6,11 +6,12 @@
                 <ion-button (click)="movetoList()" class="btnDetails"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
             </ion-col>
             <ion-col size="7" no-padding text-center>
-                <ion-img [src]="bookimage" class="detailsimg"></ion-img>
+                <ion-img src="{{book.zdjecie}}" class="detailsimg"></ion-img>
             </ion-col>
-            <ion-col>
+            <ion-col></ion-col>
+            <!--<ion-col>
                 <ion-button class="btnFavourites"><ion-icon name="heart-outline"></ion-icon></ion-button>
-            </ion-col>
+            </ion-col>-->
         </ion-row>
         <ion-list>
 
@@ -32,10 +33,10 @@
                 Stan: <br />  {{book.stan}}
             </ion-item>
             <ion-item>
-                Numer Telefonu: <br /> {{book.owner}}
+                Numer Telefonu: <br /> {{book.telefon}} 000-000-000
             </ion-item>
             <ion-item>
-                Adres e-mail: <br />  
+                Adres e-mail: <br />  {{book.email}} user@gmail.com
             </ion-item>
             <ion-item>
                 Opis: <br /> {{book.opis}}

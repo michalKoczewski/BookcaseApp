@@ -20,13 +20,13 @@
                 </ion-row>
             </ion-grid>
         </div>
-        <ion-toolbar>
+        <!--<ion-toolbar>
             <ion-searchbar placeholder="szukaj"></ion-searchbar>
-        </ion-toolbar>
+        </ion-toolbar>-->
         <ion-list>
             <ion-item *ngFor="let book of book" class="transparent" (click)="moveToBook(book)">
                 <ion-thumbnail slot="start">
-                    <img [src]="imgsource" class="ksiazka1">
+                    <img src="{{book.zdjecie}}" class="ksiazka1">
                 </ion-thumbnail>
                 <ion-label>
                     <h2>{{book.tytul}}</h2>

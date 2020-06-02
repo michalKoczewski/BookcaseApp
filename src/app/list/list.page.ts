@@ -18,7 +18,6 @@ export class ListPage {
   book: any;
   detbook = {} as Book;
   userdatabase = {} as User;
-  imgsource : string;
   constructor(
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
@@ -55,7 +54,6 @@ export class ListPage {
               zdjecie: e.payload.doc.data()["zdjecie"]
             };
           });
-          
         });
 
       (await loader).dismiss();
@@ -94,12 +92,17 @@ export class ListPage {
   }
 
   moveToBook(detbook){
-    let navigationExtras: NavigationExtras = {
-      queryParams: {
-        book: detbook
-      }
-    };
-    this.navCtrl.navigateForward('book-details', navigationExtras);
+    if(this.authService.isLoggedInx().valueOf() == true){
+      let navigationExtras: NavigationExtras = {
+        queryParams: {
+          book: detbook
+        }
+      };
+      this.navCtrl.navigateForward('book-details', navigationExtras);
+    }
+    else if (this.authService.isLoggedInx().valueOf() == false){
+      this.navCtrl.navigateForward('login');
+    }
   }
 
   async navigateToUserPanel(){

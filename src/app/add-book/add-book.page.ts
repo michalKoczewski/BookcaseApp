@@ -14,6 +14,7 @@ import { FileSizeFormatPipe } from "./file-size-format.pipe";
 import { AngularFireAuth } from "@angular/fire/auth";
 
 
+
 export interface MyData { name: string; filepath: string; size: number; }
 
 @NgModule({
@@ -38,6 +39,7 @@ export interface MyData { name: string; filepath: string; size: number; }
 export class AddBookPage implements OnInit {
   book = {} as Book;
   userid: string;
+  show: boolean;
 
   // Upload Task
   task: AngularFireUploadTask;
@@ -80,12 +82,14 @@ export class AddBookPage implements OnInit {
     this.images = this.imageCollection.valueChanges();
   }
 
-  ngOnInit() {}
+  async ngOnInit() {
+    this.show = false;
+    this.userid = (await this.ngFireAuth.currentUser).uid;
+  }
 
   async addBook() {
     this.book.zdjecie = '/book/'+this.book.zdjecie.substr(this.book.zdjecie.lastIndexOf('\\') + 1);
-    this.userid = (await this.ngFireAuth.currentUser).uid;
-    this.book.test = this.userid;
+    this.book.owner = this.userid;
     let loader = this.loadingCtrl.create({
       message: "Please wait",
     });
@@ -136,5 +140,15 @@ export class AddBookPage implements OnInit {
 
   back(){
     this.navCtrl.back();
+  }
+
+  showInput(item){
+    if(item == "Sprzedaz"){
+      this.show = true;
+    }
+    else if(item == "Wymiana"){
+      this.show = false;
+      this.book.cena = "Wymiana";
+    }
   }
 }

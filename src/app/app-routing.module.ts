@@ -3,6 +3,11 @@ import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
   {
+    path: "",
+    redirectTo: "list",
+    pathMatch: "full",
+  },
+  {
     path: "home",
     loadChildren: () =>
       import("./home/home.module").then((m) => m.HomePageModule),
@@ -30,28 +35,38 @@ const routes: Routes = [
       import("./list/list.module").then((m) => m.ListPageModule),
   },
   {
-    path: 'userpanel',
-    loadChildren: () => import('./userpanel/userpanel.module').then( m => m.UserpanelPageModule)
+    path: "userpanel",
+    loadChildren: () =>
+      import("./userpanel/userpanel.module").then((m) => m.UserpanelPageModule),
   },
   {
-    path: 'book-details',
-    loadChildren: () => import('./book-details/book-details.module').then( m => m.BookDetailsPageModule)
+    path: "book-details",
+    loadChildren: () =>
+      import("./book-details/book-details.module").then(
+        (m) => m.BookDetailsPageModule
+      ),
   },
   {
-    path: 'userpassword',
-    loadChildren: () => import('./userpassword/userpassword.module').then( m => m.UserpasswordPageModule)
+    path: "userpassword",
+    loadChildren: () =>
+      import("./userpassword/userpassword.module").then(
+        (m) => m.UserpasswordPageModule
+      ),
   },
   {
-    path: 'useremail',
-    loadChildren: () => import('./useremail/useremail.module').then( m => m.UseremailPageModule)
+    path: "useremail",
+    loadChildren: () =>
+      import("./useremail/useremail.module").then((m) => m.UseremailPageModule),
   },
   {
-    path: 'usercity',
-    loadChildren: () => import('./usercity/usercity.module').then( m => m.UsercityPageModule)
+    path: "usercity",
+    loadChildren: () =>
+      import("./usercity/usercity.module").then((m) => m.UsercityPageModule),
   },
   {
-    path: 'userdata',
-    loadChildren: () => import('./userdata/userdata.module').then( m => m.UserdataPageModule)
+    path: "userdata",
+    loadChildren: () =>
+      import("./userdata/userdata.module").then((m) => m.UserdataPageModule),
   },
 ];
 
