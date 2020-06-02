@@ -84,6 +84,7 @@ Widok wywoływany.
 * Urządzenie mobilne poinformuję nas o zainstalowaniu aplikacji.
 
 ### 3.2. T2 - Tworzenie nowego konta użytkownika
+#### Cel testu: 
 Testowanie poprawnego dodawania nowego użytkownika do bazy danych.
 #### Sposób dostępu: 
 Widok wywoływany poprzez kliknięcie przycisku zarejestruj.
@@ -96,6 +97,7 @@ Widok wywoływany poprzez kliknięcie przycisku zarejestruj.
 * Użytkownik zostaje poprawnie dodany do bazy danych. 
 
 ### 3.3. T3 - Logowanie się do aplikacji
+#### Cel testu: 
 Testowanie poprawnego logowania się w aplikacji.
 #### Sposób dostępu: 
 Widok wywoływany poprzez kliknięcie przycisku zaloguj.
@@ -108,6 +110,7 @@ Widok wywoływany poprzez kliknięcie przycisku zaloguj.
 * Użytkownik zostaje poprawnie zalogowany na swoje konto użytkownika.
 
 ### 3.4. T4 - Dodawanie nowej pozycji do listy książek
+#### Cel testu: 
 Testowanie poprawnego dodawania nowej pozycji do listy książek.
 #### Sposób dostępu: 
 Widok wywoływany poprzez kliknięcie przycisku dodaj oraz zalogowanie się na swoje konto użytkownika.
@@ -121,6 +124,7 @@ Widok wywoływany poprzez kliknięcie przycisku dodaj oraz zalogowanie się na s
 * Pozycja zostaje poprawnie dodana i wyświetla się w liście książek.
 
 ### 3.5  T5 - Zmiana hasła
+#### Cel testu: 
 Testowanie poprawnej zmiany hasła. 
 #### Sposób dostępu: 
 Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
@@ -134,6 +138,7 @@ Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
 * Hasło zostało poprawnie zmienione.
 
 ### 3.6  T6 - Zmiana adresu e-mail
+#### Cel testu: 
 Testowanie poprawnej zmiany adresu e-mail. 
 #### Sposób dostępu: 
 Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
@@ -147,6 +152,7 @@ Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
 * E-mail został poprawnie zmieniony.
 
 ### 3.7  T7 - Zmiana danych użytkownika
+#### Cel testu: 
 Testowanie poprawnej zmiany danych użytkownika. 
 #### Sposób dostępu: 
 Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
@@ -160,6 +166,7 @@ Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
 * Dane użytkownika zostały poprawnie zmienione.
 
 ### 3.8  T8 - Dodawanie lub zmiana ulubionego miasta
+#### Cel testu: 
 Testowanie poprawnego dodania lub zmiany ulubionego miasta. 
 #### Sposób dostępu: 
 Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
@@ -177,28 +184,28 @@ Widok wywoływany poprzez kliknięcie przycisku z ikoną użytkownika.
 ## Strona Główna:
 Będąc na stronie głównej można: przejść do panelu użytkownika, przejść do szczegółów oferty lub dodać nową ofertę.
 <p align="center">
-  <img width="380" height="650" src="https://i.imgur.com/4RubGgD.png">
+  <img width="310" height="550" src="https://i.imgur.com/4RubGgD.png">
 </p>
 <br><br>
 
 ## Szczegóły oferty: 
 Szczegółowe informacje dotyczące książki oraz dane kontaktowe do jej właściciela.
 <p align="center">
-  <img width="380" height="650" src="https://i.imgur.com/GFcW36l.png">
+  <img width="310" height="550" src="https://i.imgur.com/GFcW36l.png">
 </p>
 <br><br>
 
 ## Dodawanie nowej oferty: 
 Łatwe i intuicyjne dodawanie nowych ofert.
 <p align="center">
-  <img width="380" height="650" src="https://i.imgur.com/CLGbyrc.png">
+  <img width="310" height="550" src="https://i.imgur.com/CLGbyrc.png">
 </p>
 <br><br>
 
 ## Logowanie:
 Po kliknięciu przycisku z ikoną użytkownika aby dostać się do panelu użytkownika najpierw trzeba się zalogować.
 <p align="center">
-  <img width="380" height="650" src="https://i.imgur.com/lFOEIgk.png">
+  <img width="310" height="550" src="https://i.imgur.com/lFOEIgk.png">
 </p>
 <br><br>
 
@@ -207,14 +214,14 @@ Jeśli nie mamy konta użytkownika, a nie chcemy korzystać z naszego konta goog
 <p align="center">
 </p>
 <p align="center">
-  <img width="380" height="650" src="https://i.imgur.com/azT9CbL.png">
+  <img width="310" height="550" src="https://i.imgur.com/azT9CbL.png">
 </p>
 <br><br>
 
 ## Panel użytkownika: 
 Będąc w panelu użytkownika można zmienić: adres email, hasło, swoje dane oraz ulubione miasto  
 <p align="center">
-  <img width="380" height="650" src="https://i.imgur.com/Dzj8LLk.png">
+  <img width="310" height="550" src="https://i.imgur.com/Dzj8LLk.png">
 </p>
 <br><br>
 
@@ -222,7 +229,7 @@ Będąc w panelu użytkownika można zmienić: adres email, hasło, swoje dane o
 Zmiana adresu email: 
 </p>
 <p align="center">
-  <img width="380" height="650" src="https://i.imgur.com/xRoGwMB.png">
+  <img width="310" height="550" src="https://i.imgur.com/xRoGwMB.png">
 </p>
 <br><br>
                                      
@@ -230,7 +237,7 @@ Zmiana adresu email:
 Zmiana hasła: 
 </p>
 <p align="center">
-  <img width="380" height="650" src="https://i.imgur.com/x4oUEZK.png">
+  <img width="310" height="550" src="https://i.imgur.com/x4oUEZK.png">
 </p>
 <br><br>
 
@@ -238,7 +245,7 @@ Zmiana hasła:
 Zmiana danych: 
 </p>
 <p align="center">
-  <img width="380" height="650" src="https://i.imgur.com/wqzaZSC.png">
+  <img width="310" height="550" src="https://i.imgur.com/wqzaZSC.png">
 </p>
 <br><br>
 
@@ -246,7 +253,7 @@ Zmiana danych:
 Zmiana ulubionego miasta: 
 </p>
 <p align="center">
-  <img width="380" height="650" src="https://i.imgur.com/AI37LnT.png">
+  <img width="310" height="550" src="https://i.imgur.com/AI37LnT.png">
 </p>
 <br><br>
 
